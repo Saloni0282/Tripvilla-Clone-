@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #pic1{
+            display: flex;
+            margin: auto;
+            width: 100%;
+            text-align: center;
+            justify-content: space-around;
+        }
+        #left{
+            width: 43%;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            padding: 25px;
+            padding-bottom: 30px;
+        }
+        #right{
+            width: 43%;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            padding: 25px;
+            padding-bottom: 45px;
+        }
+        #left>div{
+            display: flex;
+            gap: 3px;   
+        }
+        #right>div{
+            display: flex;
+            gap: 3px;   
+        }
+        img{
+            width: 20%;
+        }
+        button{
+            background-color: #3291f1;
+            border: none;
+            box-sizing: border-box;
+            padding: 0 30px;
+            font-size:15px;
+            text-align: center;
+            height: 20%;
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div id="pic1">
+        <div id="left">
+            <h3>Holiday Home Investment Opportunities</h1>
+            <div id="child1">
+                <div>
+                    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/growth.svg" alt="">
+                    <p>Low Cost High Appreciation</p>
+                </div>
+                <div>
+                    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/maids.svg" alt="">
+                    <p>Professionally Managed</p>
+                </div>
+                <div>
+                    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/give-money.svg" alt="">
+                    <p>Guaranteed To Produce Income</p>
+                </div>
+                <div>
+                    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/plan.svg" alt="">
+                    <p>We Designed Floor Plans</p>
+                </div>
+            </div>
+            <button>EXPLORE INVESTMENT OPPORTUNITIES</button>
+        </div>
+    
+        <div id="right">
+            <h3>Are You A Holiday Home Owner/Manager</h1>
+            <div id="child1">
+                <div>
+                    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/network.svg" alt="">
+                    <p>Get Bookings From 100+ Websites</p>
+                </div>
+                <div>
+                    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/layout.svg" alt="">
+                    <p>One Dashboard - Total Control</p>
+                </div>
+                <div>
+                    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/flash.svg" alt="">
+                    <p>Instant Book Or Request To Book</p>
+                </div>
+                <div>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAADi4uL8/PwaGhp2dnbx8fHu7u74+Pjl5eXX19eWlpZeXl48PDwYGBiKioowMDBNTU2ysrKenp4SEhKEhIRvb28NDQ1DQ0POzs7a2trGxsYqKiofHx+oqKhQUFAE4D5fAAADLUlEQVR4nO3a63KiQBRFYREjiHjDW3Q08/5vOaZSM4lKlW179mmGWut/TvorWmhJBoP48mpaz+aZtvmsnlb5C6uMb7wYiXHfjRZjf+B64+b7bLN29pUrV99nq9ITOPTboN+Nhn7A4pwAmGXnwk3ov0W/WnkBt4mAWbbwARbJgFnms093CYU7D2DgJazy56rCxnpcxCZoJc8/oD+C5jYC0W110Eqef3ZNgubWAtFN5TJoJRGTg+Yu9SebYh+0koiFBM3d6z+IYZspq54efAwbPBGYrhuGLWT79ODAc4T+cBoozD6GzxV2K+2SUBVChAgRIkSI0F345lNCofy3fZVQ6PMXkxyhbQgFITQOoSCExiEUhNA4hIIQGodQEELjEApCaBxCQQiNQygIoXEIBSE0DqEghMYhFITQOISCEBqHUBBC4xAKQmgcQkEIjUMoCKFxCAUhNA6hIITGIRSE0DiEghAah1AQQuMQCkJoHEJBCI1DKAihcQgFITQOoSCExiEUhNA4hIIQGodQEELjEApCaBxCQQiNQygIoXEIBSE0DqEghMYhFITQOISCEBqHUBBC4xAKQmgcQkEIjUMoCKFxCAUhNA6hIITGIRSE0DiEghAah1AQQuMQCkJoHEJBCI27EhZjj4qEwpFPCYUJQogQIUKECBEiRIgQIcJVU+R5XjS/eyp8P/wbcnjvo3B3Neatf8L6Zk7dN+Hy7qXVrGfCX3eDfvVL+N4yKe5u01XhtGXStFfCQ8ukQ6+Ebeuym9QFYdEyqXj8Y/+R8Ngy6dgr4f3DIvZx0VXhtmXStlfC0/3f4fJTr4TZ+m7QR9ygzgqzyc2cSeSc7gpP5dWYyD3aZWF2+nkVJ7HALgsvh9O/l7GMO5J2X3j5nt9Ux6rZvTJCL4y9Q1h1e8eyr9gnBe7bTri2lcukwmX5eImvFvsKyabbF1qKmqTCxkEY97XOKv3H8NJLN/sX2z1enkEpL6LLJYz9YmfRwgc4GKwSAVdewEFxTgI8O+3Rz4abBMC5/kj6o9J/o64cTjNXrX0v4+b+NYi88WL0eGFGjRZjf+ClvJrWs7kYN5/V0+qV/5j/A0yhSG4wfo1TAAAAAElFTkSuQmCC" alt="">
+                    <p>Both iOS & Android App Available.</p>
+                </div>
+            </div>
+            <button>LIST YOUR PROPERTY</button>
+        </div>
+    
+    </div>
+</body>
+</html>
