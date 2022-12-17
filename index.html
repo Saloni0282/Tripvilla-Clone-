@@ -40,7 +40,46 @@
         #user{
             padding: 15%;
         }
+/* footer */
+.dropbtn {
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  text-align: left;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 20vw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
     </style>  
 
 </head>
@@ -61,8 +100,48 @@
                
                 <div class="icons">
                     <a href="signin.html"><div class="bx bx-user" id="user" style="color: white;"></div></a>
-                    <div><span>CHF</span><i class="ri-arrow-drop-down-line"></i></div>
-                    <div class="bx bx-menu" id="menu-icon"></div>
+                    <div><span>CHF</span><i class="ri-arrow-drop-down-line" onclick="drop()"></i></div>
+                    <div class="bx bx-menu" id="menu-icon" onclick="toggleMenu()"></div>
+                </div>
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <h4>ARE YOU A PROPERTY</h4>
+                        <h4>OWENER/Manager?</h4>
+                        <p>list New Property</p>
+                        <p>Sign In To Your Dashboard</p>
+                    </div>
+
+                    <hr>
+                    <div class="sub-menu">
+                        <h4>ARE YOU A PROPERTY</h4>
+                        <p>TRIP.COM Managed</p>
+                        <p>Homes from A grade developers Rentals</p>
+                        <p>Guaranteed</p>
+                        <p>Marketplace</p>
+                        <p>See what homes are up for sale from</p>
+                        <p>different property oweners.</p>
+                    </div>
+                    <hr>
+
+                    <div id="menu">
+                        <a href="#" class="sub-menu-link">
+                            <p>About Us</p>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <p>Privacy Policy</p>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <p>Tearm of Use</p>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <p>FAQs</p>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <p>Contact Us</p>
+                        </a>
+                    </div>
+                    
+
                 </div>
             </nav>
             </div>
@@ -165,32 +244,53 @@
 
     <div id="mid-right">
         <div id="t1">
-            <h3>Kenisha Holiday Homes</h3>
-            <p>Pawasalwadi, Maharashtra</p>
+            <a href="pic.html"  style="text-decoration: none;">
+                <h3>Kenisha Holiday Homes</h3>
+                <p>Pawasalwadi, Maharashtra</p> 
+            </a>
+                 
         </div>
         <div id="t2">
-            <h3>Tata Rio De Goa</h3> 
+            <a href="pic2.html" style="text-decoration: none;">
+                <h3>Tata Rio De Goa</h3> 
             <p>Dabolim, Goa</p>
+            </a>
+            
         </div>
         <div id="t3">
-            <h3>White Villas Shahapur</h3>
+            <a href="pic3.html" style="text-decoration: none;">
+                <h3>White Villas Shahapur</h3>
             <p>Shahapur, Maharashtra</p>
+            </a>
+            
         </div>
         <div id="t4">
-            <h3>White Villas Kasara</h3>
+            <a href="pic4.html" style="text-decoration: none;">
+                <h3>White Villas Kasara</h3>
             <p>Kasara, Maharashtra</p>
+            </a>
+            
         </div>
         <div id="t5">
-            <h3>Puravankara Adora</h3>
+            <a href="pic5.html" style="text-decoration: none;">
+                <h3>Puravankara Adora</h3>
             <p>Dabolin, Goa</p>
+            </a>
+            
         </div>
         <div id="t6">
-            <h3>Dreamz Shiroda</h3>
+            <a href="pic5.html" style="text-decoration: none;">
+                <h3>Dreamz Shiroda</h3>
             <p>Shiroda, Maharashtra</p>
+            </a>
+            
         </div>
         <div id="t7">
-            <h3>Pristine Bay Mahabalipuram</h3>
+            <a href="pic6.html" style="text-decoration: none;">
+                <h3>Pristine Bay Mahabalipuram</h3>
             <p>Thenpattinam, Tamil Nadu</p>
+            </a>
+            
         </div>
 
     </div>
@@ -314,16 +414,101 @@
 </div>
 
 </div>
-<p><a href="#">SHOW ALL IDEAS</a></p>
+<p><a href="#" style="text-decoration: none; margin-left: 30px;" >SHOW ALL IDEAS</a></p>
+
+<!-- <div style="margin-left: 30px;">
+    <div>
+        <h1>Holidays Homes Across The Globe</h1>
+        <div>
+            <h4>Asia</h4>
+            <ul>
+                <li>India</li><li>pakistan</li>
+            </ul>
+        </div>
+</div> -->
+
+<!-- footer -->
+
+    <div class="dropdown">
+        <p class="dropbtn">Asia</p>
+        <div class="dropdown-content">
+            <a href="#">India</a>
+            
+            <a href="#">Thailand</a>       
+            <a href="#">Srilanka</a>
+            <a href="#">Indonesia</a>
+            <a href="#"> United Arab Emirates</a>
+            <a href="#"> Georgia</a>
+            <a href="#"> Turkey</a>
+            <a href="#"> Israel</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <p class="dropbtn">EUROPE</p>
+        <div class="dropdown-content">
+            <a href="#">Croatia</a>
+            <a href="#">Denmark</a>       
+            <a href="#">taly</a>
+            <a href="#">Indonesia</a>
+            <a href="#"> United Arab Emirates</a>
+            <a href="#"> Georgia</a>
+            <a href="#"> Turkey</a>
+            <a href="#"> Israel</a>
+        </div>
+    </div>
+    
+    <div class="dropdown">
+        <p class="dropbtn">NORTH AMERICA</p>
+        <div class="dropdown-content">
+            <a href="#">United States Of America</a>
+            <a href="#">Mexico</a>
+            <a href="#">Dominican Republic</a>
+            <a href="#">Canada</a>
+            <a href="#">Costa Rica</a>
+            <a href="#">Jamaica</a>
+            <a href="#">Aruba</a>
+            <a href="#">Puerto Rico</a>
+            <a href="#">Saint Martin</a>
+            <a href="#">Panama</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <p class="dropbtn">SOUTH AMERICA</p>
+        <div class="dropdown-content">
+            <a href="#">Colombia</a>
+            <a href="#">Chile</a>
+            <a href="#">Brazile</a>
+            <a href="#">Argentina</a>
+            <a href="#">Peru</a>
+            <a href="#">Ecuador</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <p class="dropbtn">AFRICA</p>
+        <div class="dropdown-content">
+            <a href="#">Kenya</a>
+            <a href="#">South Africa</a>
+            <a href="#">Morocco</a>
+            <a href="#">Uganda</a>
+            <a href="#">Mauritius</a>
+            <a href="#">Tanzania</a>
+            <a href="#">Rawanda</a>
+            <a href="#">Burundi</a>
+            <a href="#">Madagascar</a>
+            <a href="#">Egypt</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <p class="dropbtn">OCENIA</p>
+        <div class="dropdown-content" >
+            <a href="#">Australia</a>
+            <a href="#">New Zealand</a>
+            <a href="#">French Polynesia</a>
+        </div>
+    </div>
 
 
-<div>
-<h1>Holidays Homes Across The Globe</h1>
-<div>
-    <h4>Asia</h4>
-    <ul>
-        <li>India</li><li>pakistan</li>
-    </ul>
+
 
 </div>
 
@@ -351,4 +536,12 @@
   },
 
 },0);
+
+
+
+let subMenu=document.getElementById("subMenu");
+
+function toggleMenu(){
+    subMenu.classList.toggle("open-menu");
+}
 </script>
