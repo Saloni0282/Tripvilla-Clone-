@@ -128,7 +128,7 @@
                 <input type="text" class="input-field" placeholder="User Id" id="name" required>
                 <input type="text" class="input-field" placeholder="Enter Password" id="password" required>
                 <input type="checkbox" class="check-box"><span>Remember Password</span>
-                <button type="submit" class="submit-btn"> Sign In</button>
+                <button type="submit" class="submit-btn"> <a href="./morepic.html" style="text-decoration: none;">Sign In</a> </button>
             </form>
             <form id="register" class="input-group">
                 <input type="text" class="input-field" placeholder="User Id" id="name" required>
@@ -136,7 +136,7 @@
                 <input type="text" class="input-field" placeholder="Enter Password" id="password" required>
                 <input type="checkbox" class="check-box"><span>I agree to the terms & 
                 conditions</span>
-                <button type="submit" class="submit-btn"> Sign Up</button>
+                <button type="submit" class="submit-btn" style="text-decoration: none;"><a href="./index.html">Sign Up</a> </button>
             </form>
             </div>
     </div>
@@ -159,9 +159,9 @@ function login(){
 }
 
 let check_Cred=JSON.parse(localStorage.getItem("account-data"))||[];
-  let myform=document.getElementById("form1");
+let myform=document.getElementById("login");
  let head=document.getElementById("heading")
-  myform.addEventListener("submit",check);
+  myform.addEventListener("submit-btn",check)
   function check(e){
     e.preventDefault();
         let email=document.getElementById("name").value;
