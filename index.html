@@ -80,26 +80,45 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
-    </style>  
+   
+#last1{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-left: 23px;
+    
+    padding-bottom: 35px;
+}
+#last2{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-left: 20px;
+    gap:10px;
+   
+    text-decoration: none;
+    
+    padding-bottom: 35px;
+    
+}
+#last2 a{
+    color:gray;
+}
+#last2 div a:hover{
+    color:orangered;
+}
+   
+   
+   
+   </style>  
 
 </head>
 <body>
     <div id="cont"> 
         <div class="header">
             <nav id="nav">
-                <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t39.30808-6/318887564_965711538167343_4154569068063923790_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=m8VfZ2sYyUEAX85Lu9m&tn=zr-fegV1VVcZKGa3&_nc_ht=scontent.fpat2-2.fna&oh=00_AfCCHHwqtnr5WRvk0q1YxeKAxgpuY1YQHNwfHqyJPNjICA&oe=639DBF98" alt="">
-                <!-- <a href="#"></a> -->
-                <!-- <ul class="link">
-                    <li>
-                        <a href="#" class="user"><i class="ri-user-fill"></i>Sign IN </a>
-                    </li>
-                    <li>
-                        <a href="#">SIGN UP</a>
-                    </li>
-                </ul> -->
+                <img src="https://scontent.fixr3-2.fna.fbcdn.net/v/t39.30808-6/319900932_1434731556930403_663155847737011396_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=V-p67ztxPp8AX81DQ8j&_nc_ht=scontent.fixr3-2.fna&oh=00_AfB00eVxCNYXVwSlKUQ9nq0AVQHUdYY55fDs1HTyej5FJQ&oe=63A24825" alt="">
                
                 <div class="icons">
-                    <a href="signin.html"><div class="bx bx-user" id="user" style="color: white;"></div></a>
+                    <a href="#"><div class="bx bx-user" id="user" style="color: white;"></div></a>
                     <div><span>CHF</span><i class="ri-arrow-drop-down-line" onclick="drop()"></i></div>
                     <div class="bx bx-menu" id="menu-icon" onclick="toggleMenu()"></div>
                 </div>
@@ -190,7 +209,7 @@
                         <option value="">50 guests</option>
                     </select>
                 </div>
-                <button type="submit">Search</button>
+                <a href="./morepic.html"><button type="submit">Search</button></a>
             </form>
         </div>
     </div>
@@ -204,7 +223,7 @@
            
             <div class="swiper-wrapper">
              
-              <div class="swiper-slide"><img src="https://scontent-ccu1-1.xx.fbcdn.net/v/t39.30808-6/320324063_539793734464349_4373961359394732654_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=2oJuKmyNYMsAX-wKMV8&_nc_ht=scontent-ccu1-1.xx&oh=00_AfBc72t7mCzbJA3Ysjp4P4j7hrvieIJm-txy5vZPDC0BpA&oe=639FBAD9" alt=""></div>
+              <div class="swiper-slide"><a href="./pic7.html"><img src="https://scontent-ccu1-1.xx.fbcdn.net/v/t39.30808-6/320324063_539793734464349_4373961359394732654_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=2oJuKmyNYMsAX-wKMV8&_nc_ht=scontent-ccu1-1.xx&oh=00_AfBc72t7mCzbJA3Ysjp4P4j7hrvieIJm-txy5vZPDC0BpA&oe=639FBAD9" alt=""></a></div>
               <div class="swiper-slide"><img src="https://scontent.fixr3-1.fna.fbcdn.net/v/t39.30808-6/319953781_523111653193422_5446211412031345727_n.jpg?stp=dst-jpg_p160x160&_nc_cat=101&ccb=1-7&_nc_sid=0debeb&_nc_ohc=VhfQvWVKbi8AX9KtYRu&tn=NCm2R07onGZDG6Yz&_nc_ht=scontent.fixr3-1.fna&oh=00_AfAd4nBsVKFC67YGfTSSHbX-DTAHPwqLigabmfzCDXxkBQ&oe=63A0DE2C" alt=""></div>
               <div class="swiper-slide"><img src="https://scontent.fixr3-1.fna.fbcdn.net/v/t39.30808-6/320162085_833577374527105_1256680762763680624_n.jpg?stp=dst-jpg_p160x160&_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=RrKWIS9C8PkAX883sWM&_nc_ht=scontent.fixr3-1.fna&oh=00_AfDwm2YY_fb-dUArZjfdP6sLjNqIiveZ8B3oqvVhRaOkzw&oe=639FE0AF" alt=""></div>
               <div class="swiper-slide"><img src="https://scontent-ccu1-1.xx.fbcdn.net/v/t39.30808-6/320146285_947033226270830_7610751561284572133_n.jpg?stp=dst-jpg_p160x160&_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=1tEh3eRN4pUAX-1y3sX&_nc_ht=scontent-ccu1-1.xx&oh=00_AfAkhK2GMLPjG40A4Jxw2dauucerBvmG3W8GP38SKQTkFQ&oe=63A10F0F" alt=""></div>
@@ -319,7 +338,7 @@
             <p>We Designed Floor Plans</p>
         </div>
     </div>
-    <button>EXPLORE INVESTMENT OPPORTUNITIES</button>
+    <a href="./morepic.html"><button>EXPLORE INVESTMENT OPPORTUNITIES</button></a>
 </div>
 
 <div id="right">
@@ -342,7 +361,7 @@
             <p>Both iOS & Android App Available.</p>
         </div>
     </div>
-    <button>LIST YOUR PROPERTY</button>
+    <a href="./morepic.html"><button>LIST YOUR PROPERTY</button></a>
 </div>
 
 </div>
@@ -414,101 +433,139 @@
 </div>
 
 </div>
-<p><a href="#" style="text-decoration: none; margin-left: 30px;" >SHOW ALL IDEAS</a></p>
+<p><a href="signin.html" style="text-decoration: none; margin-left: 30px;" >SHOW ALL IDEAS</a></p>
 
-<!-- <div style="margin-left: 30px;">
-    <div>
-        <h1>Holidays Homes Across The Globe</h1>
-        <div>
-            <h4>Asia</h4>
-            <ul>
-                <li>India</li><li>pakistan</li>
-            </ul>
-        </div>
-</div> -->
 
 <!-- footer -->
 
-    <div class="dropdown">
-        <p class="dropbtn">Asia</p>
-        <div class="dropdown-content">
-            <a href="#">India</a>
-            
-            <a href="#">Thailand</a>       
-            <a href="#">Srilanka</a>
-            <a href="#">Indonesia</a>
-            <a href="#"> United Arab Emirates</a>
-            <a href="#"> Georgia</a>
-            <a href="#"> Turkey</a>
-            <a href="#"> Israel</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <p class="dropbtn">EUROPE</p>
-        <div class="dropdown-content">
-            <a href="#">Croatia</a>
-            <a href="#">Denmark</a>       
-            <a href="#">taly</a>
-            <a href="#">Indonesia</a>
-            <a href="#"> United Arab Emirates</a>
-            <a href="#"> Georgia</a>
-            <a href="#"> Turkey</a>
-            <a href="#"> Israel</a>
-        </div>
+    <div id="last1">
+        <div><u>ASIA</u> </div>
+    <div><u>EUROPE</u></div>
+    <div><u>NORTH AMERICA</u></div>
+    <div><u>SOUTH AMERICA</u></div>
+    <div><u>AFRICA</u></div>
+    <div><u>OCENIA</u></div>
     </div>
     
-    <div class="dropdown">
-        <p class="dropbtn">NORTH AMERICA</p>
-        <div class="dropdown-content">
-            <a href="#">United States Of America</a>
-            <a href="#">Mexico</a>
-            <a href="#">Dominican Republic</a>
-            <a href="#">Canada</a>
-            <a href="#">Costa Rica</a>
-            <a href="#">Jamaica</a>
-            <a href="#">Aruba</a>
-            <a href="#">Puerto Rico</a>
-            <a href="#">Saint Martin</a>
-            <a href="#">Panama</a>
+    <div id="last2">
+        <div><a href="second.html" >
+            <H4>India</H4>
+            <p>3262 holidays homes</p>
+        </a></div>
+        <div>
+            <a href="second.html">
+                <H4>
+                    Sri Lanka</H4>
+                <p>646 holidays homes</p>
+            </a>
         </div>
-    </div>
-    <div class="dropdown">
-        <p class="dropbtn">SOUTH AMERICA</p>
-        <div class="dropdown-content">
-            <a href="#">Colombia</a>
-            <a href="#">Chile</a>
-            <a href="#">Brazile</a>
-            <a href="#">Argentina</a>
-            <a href="#">Peru</a>
-            <a href="#">Ecuador</a>
+        <div>
+            <a href="second.html">
+                <H4>Indonesia</H4>
+                <p>622 holidays homes</p>
+            </a>
         </div>
-    </div>
-    <div class="dropdown">
-        <p class="dropbtn">AFRICA</p>
-        <div class="dropdown-content">
-            <a href="#">Kenya</a>
-            <a href="#">South Africa</a>
-            <a href="#">Morocco</a>
-            <a href="#">Uganda</a>
-            <a href="#">Mauritius</a>
-            <a href="#">Tanzania</a>
-            <a href="#">Rawanda</a>
-            <a href="#">Burundi</a>
-            <a href="#">Madagascar</a>
-            <a href="#">Egypt</a>
+        <div>
+            <a href="second.html">
+                <H4>
+                    Philippines</H4>
+                <p>378 holidays homes</p>
+            </a>
         </div>
-    </div>
-    <div class="dropdown">
-        <p class="dropbtn">OCENIA</p>
-        <div class="dropdown-content" >
-            <a href="#">Australia</a>
-            <a href="#">New Zealand</a>
-            <a href="#">French Polynesia</a>
+        <div>
+            <a href="second.html">
+                <H4>
+                    United Arab Emirates
+                    </H4>
+                <p>146 holidays homes</p>
+            </a>
         </div>
+        <div>
+            <a href="second.html">
+                <H4>Georgia</H4>
+                <p>102 holidays homes</p>
+            </a>
+        </div>
+        <div>
+            <a href="second.html">
+                <H4>Turkey</H4>
+                <p>70 holidays homes</p>
+            </a>
+        </div>
+        <div>
+            <a href="second.html">
+                <H4>
+                    Israel</H4>
+                <p>53 holidays homes</p>
+            </a>
+        </div>
+        <div>
+            <a href="second.html">
+                <H4>Malaysia</H4>
+                <p>49 holidays homes</p>
+            </a>
+        </div>
+        <div>
+            <a href="second.html">
+                <H4>
+                    Japan
+                    </H4>
+                <p>46 holidays homes</p>
+            </a>
+        </div>
+        <div>
+            <a href="second.html">
+                <H4>
+                    Viet Nam</H4>
+                <p>37 holidays homes</p>
+            </a>
+        </div>
+        <div>
+            <a href="second.html">
+                <H4>Cambodia</H4>
+                <p>26 holidays homes</p>
+            </a>
+        </div>
+        
+        <div>
+            <a href="second.html">
+                <h4>Nepal</h4>
+                <p>22 holidays homes</p>
+            </a>
+        </div>    
+        <div>
+            <a href="second.html">
+                <H4>Maldives</H4>
+                <p>19 holidays homes</p>
+            </a>
+        </div>
+    <div>
+        <a href="second.html">
+            <H4>Taiwan, Province Of China
+                </H4>
+                <p>17 holidays homes</p>
+        </a>
     </div>
-
-
-
+    <div>
+        <a href="#">
+            <H4>Republic Of Korea</H4>
+                <p>12 holidays homes</p>
+        </a>
+    </div>
+    <div>
+        <a href="second.html">
+            <H4>Oman</H4>
+                <p>7 holidays homes</p>
+           </a>
+    </div>
+    <div>
+        <a href="second.html">
+            <H4>Bangladesh</H4>
+            <p>5 holidays homes</p>
+           </a>
+    </div> 
+       
+    </div>
 
 </div>
 
@@ -544,4 +601,13 @@ let subMenu=document.getElementById("subMenu");
 function toggleMenu(){
     subMenu.classList.toggle("open-menu");
 }
+
+
+ document.getElementById("user").addEventListener("click",()=>{
+
+window.location.href="./sign1.html";
+
+})
+
+
 </script>
