@@ -116,68 +116,84 @@
             <div class="form-box">
             <div class="button-box">
                 <div id="btn1"></div>
-                <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
-                <button type="button" class="toggle-btn" onclick="register()">Sign Up </button>
+                <button type="button" class="toggle-btn" onclick="loginTab()">Sign In</button>
+                <button type="button" class="toggle-btn" onclick="registerTab()">Sign Up</button>
             </div>
             <div class="social-icons">
                 <img src="https://www.prepleaf.com/img/footer/facebookIcon.svg" alt="">
                 <img src="https://www.prepleaf.com/img/footer/twitterIconMobile.svg" alt="">
                 <img src="https://sso.masaischool.com/google.svg" alt="">
             </div>
-            <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="User Id" id="name" required>
-                <input type="text" class="input-field" placeholder="Enter Password" id="password" required>
+             <form id="login" class="input-group">
+                <input type="email" class="input-field" placeholder="Email Id" id="login-email" required>
+                <input type="password" class="input-field" placeholder="Enter Password" id="login-password" required>
                 <input type="checkbox" class="check-box"><span>Remember Password</span>
-                <button type="submit" class="submit-btn"> <a href="./morepic.html" style="text-decoration: none;">Sign In</a> </button>
+                <button type="button" class="submit-btn" onclick="login()">Sign In</button>
             </form>
             <form id="register" class="input-group">
-                <input type="text" class="input-field" placeholder="User Id" id="name" required>
-                <input type="email" class="input-field" placeholder="Email Id" id="name" required>
-                <input type="text" class="input-field" placeholder="Enter Password" id="password" required>
-                <input type="checkbox" class="check-box"><span>I agree to the terms & 
-                conditions</span>
-                <button type="submit" class="submit-btn" style="text-decoration: none;"><a href="./index.html">Sign Up</a> </button>
+                <input type="text" class="input-field" placeholder="User Id" id="register-username" required>
+                <input type="email" class="input-field" placeholder="Email Id" id="register-email" required>
+                <input type="password" class="input-field" placeholder="Enter Password" id="register-password" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="button" class="submit-btn" onclick="register()">Sign Up</button>
             </form>
             </div>
     </div>
 </body>
 </html>
 <script>
-var x=document.getElementById("login");
-var y=document.getElementById("register");
-var z=document.getElementById("btn1");
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn1");
+        var head = document.getElementById("heading");
 
-function register(){
-    x.style.left="-400px";
-    y.style.left="50px";
-    z.style.left="110px";
-}
-function login(){
-    x.style.left="50px";
-    y.style.left="450px";
-    z.style.left="0px";
-}
+    function registerTab() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
 
-let check_Cred=JSON.parse(localStorage.getItem("account-data"))||[];
-let myform=document.getElementById("login");
- let head=document.getElementById("heading")
-  myform.addEventListener("submit-btn",check)
-  function check(e){
-    e.preventDefault();
-        let email=document.getElementById("name").value;
+    function loginTab() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+    }
+        function login() {
+        // Get user input
+        var email = document.getElementById("login-email").value;
+        var password = document.getElementById("login-password").value;
 
-        let pass=document.getElementById("password").value;
-        var flag=false;
-        check_Cred.forEach(function(element,index){
-        if(email==element.email && pass==element.password){
-            flag=true;
+        // Implement your login logic here (e.g., check credentials from local storage)
+        // Replace the following lines with your actual logic
+        var storedCredentials = JSON.parse(localStorage.getItem("userCredentials")) || [];
+        var user = storedCredentials.find((user) => user.email === email && user.password === password);
+        if (user) {
+            window.alert("Login successful");
+            window.location.href = "index.html";
+        } else {
+            window.alert("Wrong credentials. Please try again.");
         }
-        })
-        if(flag==false){
-            head.innerText=("Wrong Credentials")
+    }
+
+    function register() {
+        // Get user input
+        var username = document.getElementById("register-username").value;
+        var email = document.getElementById("register-email").value;
+        var password = document.getElementById("register-password").value;
+
+        // Implement your registration logic here (e.g., store credentials in local storage)
+        // Replace the following lines with your actual logic
+        var storedCredentials = JSON.parse(localStorage.getItem("userCredentials")) || [];
+        // Check if the email is already registered
+        if (storedCredentials.some((user) => user.email === email)) {
+            window.alert("This email is already registered.");
+        } else {
+            // Add the new user's credentials to the stored credentials
+            storedCredentials.push({ username, email, password });
+            localStorage.setItem("userCredentials", JSON.stringify(storedCredentials));
+            window.alert("Registration successful. You can now log in.");
+            loginTab(); // Switch to the login tab after registration
         }
-        else{
-          head.innerText=("Login Successful")
-        }
-  }
-</script>
+    }
+
+    </script>
